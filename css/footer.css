@@ -1,0 +1,30 @@
+.footer .footertitle{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.footer .footerelements{
+    color:white;
+    font-family: "Poppins", sans-serif;
+    display:flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer .footerelements ul li{
+    margin-bottom: 10px;
+}
+
+.footer .copyright{
+    color:white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 10px;
+}
+
+.footer{
+    background-color: #003247;
+}

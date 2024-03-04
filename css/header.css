@@ -1,0 +1,30 @@
+.header .pagetitle h1{
+    color: #009EE2;
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+    font-size: 50px;
+    text-align: center;
+    padding-top:30px;
+}
+
+.header .pagetitle{
+    margin-bottom: 20px;
+}
+
+.header .navbar ul{
+    display:flex;
+    color:white;
+    background-color: black;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.header .navbar ul li{
+    padding-right: 50px;
+}
+
+.header{
+    background-color:black;
+}
