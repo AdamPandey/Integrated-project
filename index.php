@@ -10,7 +10,7 @@ require_once "./story.php";
 // $stories = Story::findByAuthor($authorId, $options = array('limit' => 3, 'offset' => 2));
 
 $categoryId = 4;
-$podcasts = Story::findByCategory($categoryId, $options = array('limit' => 4, 'offset' => 0));
+$stories = Story::findByCategory($categoryId, $options = array('limit' => 4, 'offset' => 0));
 
 // $locationId = 8;
 // $stories = Story::findByLocation($locationId, $options = array('limit' => 4, 'offset' => 0));
@@ -77,20 +77,6 @@ $podcasts = Story::findByCategory($categoryId, $options = array('limit' => 4, 'o
 			</div>
 			
 			<div class="width-4">
-			<?php foreach ($podcasts as $s) { ?>
-        <div class="mediumStory">
-        <img src="<?= $s->img_url ?>" />
-        <h3><?= Category::findById($s->category_id)->name ?></h3>
-    
-        <h1><?= $s->headline ?></h1>
-        <h4><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name . " in " .
-        Location::findById($s->location_id)->name ?></h4>
-           <div class="article"><?= substr($s->article,0,200) ?>
-        
-           <p><?= $s->updated_at ?></p>
-        </div>
-        </div>
-    <?php } ?>
 
 			</div>
 
