@@ -39,7 +39,7 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 4, 'of
 	<!-- Medium Arcticles -->
 	<section class="header">
 		<div class="pagetitle">
-			<h1><a href="index.html">The Gaming Nest</a></h1>
+			<h1><a href="index.php">The Gaming Nest</a></h1>
 		</div>
 		<div class="navbar">
 			<ul>
@@ -73,11 +73,54 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 4, 'of
 				<!-- <p class="description">
 						The concept of Impostor Syndrome has become ubiquitous. Critics, and
 						even the idea's originators, question its value.
-					</p> -->
+				</p> -->
 			</div>
 			
 			<div class="width-4">
+			<div class="panel small">
+					<img src="images/15.jpg">
 
+
+					<div class="content">
+						<h3><a href="#">8 charts on technology used around the world</a></h3>
+
+						<div class="authorGenre">
+							<p class="author">LESLIE JAMISON</p>
+							<p>|</p>
+							<p class="genre">PSYCHOLOGY</p>
+						</div>
+
+						<p class="description">
+							The concept of Impostor Syndrome has become ubiquitous. Critics, and
+							even the idea's originators, question its value.
+						</p>
+
+					</div>
+
+
+				</div>
+
+				<div class="panel small width-4">
+					<img src="images/Chotiner-xi-balloon.webp">
+
+					<div class="content">
+						<h3><a href="#">Beverly Hills Cop: Axel F Release Date Confirmed For July</a></h3>
+
+						<div class="authorGenre">
+							<p class="author">LESLIE JAMISON</p>
+							<p>|</p>
+							<p class="genre">PSYCHOLOGY</p>
+						</div>
+
+						<p class="description">
+							The concept of Impostor Syndrome has become ubiquitous. Critics, and
+							even the idea's originators, question its value.
+						</p>
+
+					</div>
+
+
+				</div>
 			</div>
 
 			<div class="width-4 panel medium">

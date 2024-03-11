@@ -43,15 +43,12 @@ $stories = Story::findByLocation($locationId, $options = array('limit' => 4, 'of
         <h1><?= $s->headline ?></h1>
         <h4><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name . " in " .
         Location::findById($s->location_id)->name ?></h4>
-           <div class="article"><?= substr($s->article,0,200) ?>
-        
+           <div class="article"><?= substr($s->article,0,200) ?> 
            <p><?= $s->updated_at ?></p>
         </div>
-          
-            
-
         </div>
     <?php } ?>
+    <!-- For the tom and jerry image part, create a loop that checks on the third [2] array element to print it out as width-8-->
     </div>
     </div>
        
