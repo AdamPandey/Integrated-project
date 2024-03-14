@@ -10,7 +10,7 @@ require_once "./story.php";
 // $stories = Story::findByAuthor($authorId, $options = array('limit' => 3, 'offset' => 2));
 
 $categoryId = 1;
-$stories = Story::findByCategory($categoryId, $options = array('limit' => 2, 'offset' => 0));
+$stories = Story::findByCategory($categoryId, $options = array('limit' => 2, 'offset' => 1));
 
 // $locationId = 8;
 // $stories = Story::findByLocation($locationId, $options = array('limit' => 4, 'offset' => 0));
@@ -121,9 +121,10 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 2, 'of
         	<div class="panel small">
         	<img src="<?= $s->img_url ?>" />
     
-        	<h1><?= $s->headline ?></h1>
-           	<div class="content"><?= substr($s->article,0,200) ?> 
-           	<p><?= $s->updated_at ?></p>
+        	<div class="content">
+			<h4><?= $s->headline ?></h4>
+           	<div class=""><?= substr($s->article,0,200) ?> 
+			</div>
         	</div>
         	</div>
     			<?php } ?>
