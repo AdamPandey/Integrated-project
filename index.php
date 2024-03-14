@@ -9,8 +9,8 @@ require_once "./story.php";
 // $authorId = 7;
 // $stories = Story::findByAuthor($authorId, $options = array('limit' => 3, 'offset' => 2));
 
-$categoryId = 4;
-$stories = Story::findByCategory($categoryId, $options = array('limit' => 4, 'offset' => 0));
+$categoryId = 1;
+$stories = Story::findByCategory($categoryId, $options = array('limit' => 2, 'offset' => 0));
 
 // $locationId = 8;
 // $stories = Story::findByLocation($locationId, $options = array('limit' => 4, 'offset' => 0));
@@ -70,14 +70,10 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 4, 'of
 					</div>
 				</div>
 
-				<!-- <p class="description">
-						The concept of Impostor Syndrome has become ubiquitous. Critics, and
-						even the idea's originators, question its value.
-				</p> -->
 			</div>
 			
 			<div class="width-4">
-			<div class="panel small">
+			<!-- <div class="panel small">
 					<img src="images/15.jpg">
 
 
@@ -97,8 +93,7 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 4, 'of
 
 					</div>
 
-
-				</div>
+			</div>
 
 				<div class="panel small width-4">
 					<img src="images/Chotiner-xi-balloon.webp">
@@ -120,7 +115,18 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 4, 'of
 					</div>
 
 
-				</div>
+				</div> -->
+				
+				<?php foreach ($stories as $s) { ?>
+        	<div class="panel small">
+        	<img src="<?= $s->img_url ?>" />
+    
+        	<h1><?= $s->headline ?></h1>
+           	<div class="content"><?= substr($s->article,0,200) ?> 
+           	<p><?= $s->updated_at ?></p>
+        	</div>
+        	</div>
+    			<?php } ?>
 			</div>
 
 			<div class="width-4 panel medium">
