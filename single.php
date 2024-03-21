@@ -42,7 +42,7 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 5, 'of
 	<!-- Medium Arcticles -->
 	<section class="header">
 		<div class="pagetitle">
-			<h1><a href="index.html">The Gaming Nest</a></h1>
+			<h1><a href="index.php">The Gaming Nest</a></h1>
 		</div>
 		<div class="navbar">
 			<ul>
@@ -104,15 +104,15 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 5, 'of
 				</div>
 			</div>
 			<div class="content width-2">
+				<h3>More stories</h3>
 				<?php foreach ($stories as $s) { ?>
         		<div class="imageHolder">
         		<img src="<?= $s->img_url ?>" />
-    
-        		
 				<h4><?= $s->headline ?></h4>
-           		<div class=""><?= substr($s->article,0,100) ?> 
-				
+           		<div class=""> 
+					<h4>Read more<h4>
         		</div>
+				<br>
         		</div>
     			<?php } ?>
 				</div>
@@ -153,36 +153,6 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 5, 'of
 						Years Later
 					</a>
 				</h4> -->
-			</div>
-			<div class="content width-4">
-				<img src="images/25.jpg">
-				<div class="title">
-					<h4><a href="#">Suicide Squad: Kill the Justice League review – straddles the brilliant and the
-							banal
-						</a>
-					</h4>
-				</div>
-				<p>Read more</p>
-			</div>
-			<div class="content width-4">
-				<img src="images/25.jpg">
-				<div class="title">
-					<h4><a href="#">Suicide Squad: Kill the Justice League review – straddles the brilliant and the
-							banal
-						</a>
-					</h4>
-				</div>
-				<p>Read more</p>
-			</div>
-			<div class="content width-4">
-				<img src="images/25.jpg">
-				<div class="title">
-					<h4><a href="#">Suicide Squad: Kill the Justice League review – straddles the brilliant and the
-							banal
-						</a>
-					</h4>
-				</div>
-				<p>Read more</p>
 			</div>
 		</div>
 	</section>
