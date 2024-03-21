@@ -61,7 +61,7 @@ $stories = Story::findByCategory($categoryId, $options = array('limit' => 2, 'of
 				</div>
 
 				<div class="content">
-					<h3><a href="single.html">OpenAI is adding new watermarks to DALL-E 3</a></h3>
+					<h3><a href="single.php">OpenAI is adding new watermarks to DALL-E 3</a></h3>
 
 					<div class="authorGenre">
 						<p class="author">LESLIE JAMISON</p>

@@ -1,3 +1,22 @@
+<?php
+require_once "./author.php";
+require_once "./category.php";
+require_once "./location.php";
+require_once "./story.php";
+
+// $stories = Story::findAll($options = array('limit' => 2, 'offset' => 2));
+
+// $authorId = 7;
+// $stories = Story::findByAuthor($authorId, $options = array('limit' => 3, 'offset' => 2));
+
+$categoryId = 3;
+$stories = Story::findByCategory($categoryId, $options = array('limit' => 5, 'offset' => 0));
+
+// $locationId = 8;
+// $stories = Story::findByLocation($locationId, $options = array('limit' => 4, 'offset' => 0));
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +104,20 @@
 				</div>
 			</div>
 			<div class="content width-2">
-				<h1>More stories</h1>
+				<?php foreach ($stories as $s) { ?>
+        		<div class="imageHolder">
+        		<img src="<?= $s->img_url ?>" />
+    
+        		
+				<h4><?= $s->headline ?></h4>
+           		<div class=""><?= substr($s->article,0,100) ?> 
+				
+        		</div>
+        		</div>
+    			<?php } ?>
+				</div>
+
+				<!-- <h1>More stories</h1>
 				<div class="imageHolder">
 					<img src="images/10.jpg">
 				</div>
@@ -120,7 +152,7 @@
 				<h4><a href="#">Tom & Jerry's Critically Panned Live-Action Movie Gets Second Life On Netflix 3
 						Years Later
 					</a>
-				</h4>
+				</h4> -->
 			</div>
 			<div class="content width-4">
 				<img src="images/25.jpg">
