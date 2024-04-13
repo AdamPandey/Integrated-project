@@ -30,7 +30,7 @@ catch (Exception $ex) {
 }
 
 
-$stories_all = Story::findAll($options = array('limit' => 1, 'offset' => 0));
+// $stories = Story::findAll($options = array('limit' => 1, 'offset' => 0));
 ?>
 
 <!DOCTYPE html>
@@ -74,23 +74,22 @@ $stories_all = Story::findAll($options = array('limit' => 1, 'offset' => 0));
 	<section class="Articles">
 		<div class="container">
 			<div class="width-12">
-					<?php foreach ($stories_all as $s) { ?>
+					
         			<div class="imageHolder">
-        				<img src="<?= $s->img_url ?>" />
+        				<img src="<?= $story->img_url?>"/>
 					</div>
 					<br>
 					<div class="content">
 						<h2>
-							<a href="single.php?id=<?= $s->id ?>">
-								<?= $s->headline ?>
+							<a href="single.php?id=<?= $story->id ?>">
+								<?= $story->headline ?>
 							</a>
 						</h2>
 						<br>
-						<div class=""><?= $s->article ?>
+						<div class=""><?= $story->article ?>
 						<br> 
-						<p><?= $s-> author_id ?></p>
+						<p><?= $story-> author_id ?></p>
 					</div>
-    				<?php } ?>
 			</div>
 		</div>
 	</section>
