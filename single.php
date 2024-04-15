@@ -13,11 +13,11 @@
         $id = $_GET["id"];
         $story = Story::findById($id);
         if ($story === null){
-            throw new Exception("Movie not found");
+            throw new Exception("Story not found");
         }
     }
     else {
-        throw new Exception("Missing parameter: Movie id");
+        throw new Exception("Missing parameter: Story id");
     }
  
     if(session_status()=== PHP_SESSION_NONE){
