@@ -88,7 +88,7 @@ catch (Exception $ex) {
 						<br>
 						<div class=""><?= $story->article ?>
 						<br> 
-						<p><?= $story-> author_id ?></p>
+						<p><?= Author::findById($story->author_id)->first_name . " " . Author::findById($story->author_id)->last_name?></p>
 					</div>
 			</div>
 		</div>

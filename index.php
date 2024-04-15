@@ -80,7 +80,7 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
 						<?= $s->headline ?>
 					</a>
 				</h2>
-				<p><?= $s-> author_id ?></p>
+				<p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p>
 				</div>
     			<?php } ?>
 			</div>
@@ -94,7 +94,8 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
 				<h4><a href="single.php?id=<?= $s->id ?>">
 						<?= $s->headline ?>
 					</a></h4>
-           		<div class=""><?= substr($s->article,0,200) ?> 
+           		<div class=""><?= substr($s->article,0,200) ?>
+				   <p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p> 
 				</div>
         		</div>
         		</div>
@@ -111,6 +112,7 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
 						<?= $s->headline ?>
 					</a></h4>
         		</div>
+				<p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p>
         		</div>
 				</div>
     		<?php } ?>
@@ -124,6 +126,7 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
 					</a></h3>
 				<div class="description">
 				<p><?= substr($s->article,0,100) ?> </p>
+				<p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p>
         		</div>
         		</div>
 				</div>
@@ -139,6 +142,7 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
 						<?= $s->headline ?>
 					</a></h4>
         		</div>
+				<p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p>
         		</div>
 				</div>
     		<?php } ?>
