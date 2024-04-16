@@ -51,6 +51,7 @@ catch (Exception $ex) {
 	<link rel="stylesheet" href="CSS/header.css" />
 	<link rel="stylesheet" href="CSS/footer.css" />
 	<link rel="stylesheet" href="CSS/main.css" />
+	<link rel="stylesheet" href="CSS/single.css" />
 	<title>single story</title>
 </head>
 
@@ -89,10 +90,108 @@ catch (Exception $ex) {
 						<div class=""><?= $story->article ?>
 						<br> 
 						<p><?= Author::findById($story->author_id)->first_name . " " . Author::findById($story->author_id)->last_name?></p>
+						</div>
 					</div>
 			</div>
 		</div>
 	</section>
+	<section class="discuss">
+		<div class="container">
+			<div class="width-12">
+			<div class="head">
+				<h1>Post a Comment</h1></div>
+				<div><span id="comment">0</span> Comments</div>
+				<div class="text"><p>Start discussing!</p></div>
+				<div class="comments"></div>
+				<div class="commentbox">
+				<img src="user1.jpg" alt="">
+				<div class="content">
+					<h2>Comment as: </h2>
+					<input type="text" value="Anonymous" class="user">
+					<div class="commentinput">
+						<input type="text" placeholder="Enter comment" class="usercomment">
+						<div class="buttons">
+							<button type="submit" disabled id="publish">Publish</button>
+						</div>
+					</div>
+					<p class="policy">This site is protected by reCAPTCHA and the Google <a href="">privacy policy</a> and <a href="">Terms of service</a> apply.</p>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		"use strict";
+
+		const userId = {
+			name:null,
+			identity:null,
+			image:null,
+			message: null,
+			date:null
+		}
+
+		const userComment = document.querySelector(".usercomment");
+		const publishBtn = document.querySelector("#publish");
+		const comments = document.querySelector(".comments");
+		const userName = document.querySelector(".user");
+
+		userComment.addEventListener("input", e => {
+			if(!userComment.value){
+				publishBtn.setAttribute("disabled", "disabled");
+				publishBtn.classList.remove("abled");
+			}
+			else{
+				publishBtn.removeAttribute("disabled");
+				publishBtn.classList.add("abled");
+			}
+
+		})
+
+		function addPost(){
+			console.log("the button works!");
+			if(!userComment.value) return;
+			userId.name = userName.value;
+			if(userId.name === "Anonymous"){
+				userId.identity = false;
+				userId.image = "anonymous.jpg";
+			}
+			else{
+				userId.identity = true;
+				userId.image = "user1.jpg";
+			}
+
+			userId.message = userComment.value;
+			userId.date = new Date().toLocaleString();
+			let published = 
+			`<div class="parents">
+				<img src="${userId.image}"
+				<div class="commentcontent">
+					<h1>${userId.name}<h1>
+					<p>${userId.message}</p>
+					<div class="engagements">
+						<img src="like.png">
+						<img src="share.png">
+					</div>
+					<span class= "date">${userId.date}</span>
+				</div>
+			 </div>
+			`;
+
+			comments.innerHTML += published;
+			userComment.value = "";
+
+			let commentsNum = document.querySelectorAll(".parents").length;
+			document.getElementById("comment").textContent = commentsNum; 
+		}
+
+		publishBtn.addEventListener("click", addPost)
+
+
+	</script>
+
 	<section class="footer">
 		<div class="footertitle">
 			<h1>The Gaming Nest</h1>

@@ -89,3 +89,7 @@
 .panel.large .mediumstories{
 	display:flex;
 }
+
+h4{
+	font-weight: 25;
+}

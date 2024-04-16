@@ -1,0 +1,136 @@
+.discuss{
+    display:flex;
+    justify-content: left;
+    font-family: monospace;
+}
+
+.discuss .container{
+	background: #fff;
+	padding: 20px;
+	font-family: monospace;
+    width:1000px;
+    box-shadow:0 0 5px #000;
+}
+
+.discuss .container .width-12 .head{
+    text-transform:uppercase;
+    margin-bottom: 20px;
+}
+
+.discuss .container .width-12 .text{
+    margin:10px 0;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+
+.discuss .container .width-12 .head .commentbox{
+    display:flex;
+    justify-content:space-around;
+    padding:10px;
+}
+
+.discuss .container .width-12 img{
+    width: 40px;
+    height:40px;
+    border-radius:50%;
+    margin-right: 20px;
+    object-fit:cover;
+    object-position: center;
+}
+
+.discuss .container .width-12 .content{
+    width:100%;
+}
+
+.discuss .container .width-12 .content .user{
+    border:none;
+    outline:none;
+    margin:5px 0;
+    color:#808080;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.discuss .container .width-12 .content .commentinput input{
+    border:none;
+    padding:10px;
+    padding-left:0;
+    outline: none;
+    border-bottom:2px solid blue;
+    margin-bottom: 10px;
+    width:95%;
+}
+
+.discuss .container .width-12 .content .commentinput .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#808080;
+}
+
+.discuss .container .width-12 .content .commentinput .buttons button{
+    padding: 5px 10px;
+    background: lightgrey;
+    color:#808080;
+    text-transform: uppercase;
+    border:none;
+    outline:none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.discuss .container .width-12 .content .policy{
+    margin: 20px 0;
+    font-size:0.8em;
+    font-family: Arial, sans-serif;
+    color:#808080;
+}
+
+.discuss .container .width-12 .content .policy a{
+    text-decoration:none;
+    color:blue;
+}
+
+.discuss .container .width-12 .content .commentinput .buttons button.abled{
+    background-color: blue;
+    color: #fff;
+}
+
+
+.parents{
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.parents h1{
+    font-size: 1.2em;
+}
+
+.parents p{
+    margin: 10px 0;
+    font-size: 0.7em;
+}
+
+.parents img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit:cover;
+    object-position: center;
+}
+
+.engagements{
+    display: flex;
+    align-items: center;
+    margin-bottom:10px;
+}
+
+.parents .commentcontent .engagements img{
+    width:20px;
+}
+
+.engagements img:nth-child(1){
+    margin-right:10px;
+    width:25px;
+}

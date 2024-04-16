@@ -110,9 +110,11 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
         		<div class="title">
 				<h4><a href="single.php?id=<?= $s->id ?>">
 						<?= $s->headline ?>
-					</a></h4>
+					</a>
+				</h4>
+					<h5><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></h5>
         		</div>
-				<p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p>
+				
         		</div>
 				</div>
     		<?php } ?>
@@ -125,8 +127,8 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
 						<?= $s->headline ?>
 					</a></h3>
 				<div class="description">
-				<p><?= substr($s->article,0,100) ?> </p>
-				<p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p>
+				<p><?= substr($s->article,0,100) ?>... </p>
+				<h5><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></h5>
         		</div>
         		</div>
 				</div>
@@ -140,9 +142,11 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
         		<div class="title">
 				<h4><a href="single.php?id=<?= $s->id ?>">
 						<?= $s->headline ?>
-					</a></h4>
+					</a>
+				</h4>
+				<h5><?= substr($s->article,0,250) ?> ...</h5>
+				<h6><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></h6>
         		</div>
-				<p><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></p>
         		</div>
 				</div>
     		<?php } ?>
@@ -153,9 +157,10 @@ $location = Story::findByLocation($locationId, $options = array('limit' => 4, 'o
         		<img src="<?= $s->img_url ?>" />
 				</div>
         		<div class="content">
-				<h3><a href="single.php?id=<?= $s->id ?>">
+				<h2><a href="single.php?id=<?= $s->id ?>">
 						<?= $s->headline ?>
-					</a></h3>
+					</a></h2>
+				<h4><?= Author::findById($s->author_id)->first_name . " " . Author::findById($s->author_id)->last_name?></h4>
         		</div>
     		<?php } ?>
 			</div>
