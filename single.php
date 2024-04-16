@@ -115,7 +115,7 @@ catch (Exception $ex) {
 							<button type="submit" disabled id="publish">Publish</button>
 						</div>
 					</div>
-					<p class="policy">This site is protected by reCAPTCHA and the Google <a href="">privacy policy</a> and <a href="">Terms of service</a> apply.</p>
+					<p class="policy">This site is protected by reCAPTCHA and the Google <a href="https://www.youtube.com/watch?v=EE-xtCF3T94">privacy policy</a> and <a href="https://www.youtube.com/watch?v=EE-xtCF3T94">Terms of service</a> apply.</p>
 				</div>
 			</div>
 			</div>
