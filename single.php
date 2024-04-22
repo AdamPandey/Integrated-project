@@ -30,7 +30,6 @@ catch (Exception $ex) {
 }
 
 
-// $stories = Story::findAll($options = array('limit' => 1, 'offset' => 0));
 ?>
 
 <!DOCTYPE html>
